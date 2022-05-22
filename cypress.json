@@ -2,5 +2,7 @@
     "baseUrl" : "https://app.pws.int.cruk.org",
     "ignoreTestFiles" : ["**/1-getting-started/**","**/2-advanced-examples/*"],
     "viewPortHeight" : 780,
-    "viewPortWidth" : 1260
+    "viewPortWidth" : 1260,
+    "chromeWebSecurity": false
+
 }
