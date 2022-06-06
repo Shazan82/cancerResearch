@@ -76,5 +76,13 @@ describe ('Cancer Research Payment Page', () => {
 
             cy.get("button").contains("Complete my donation").click()    
         })
+
+        it.only('desendant locator', () => {
+
+            cy.visit('/') // when using baseUrl as "https://app.pws.int.cruk.org/support-us/your-donation" cypress was not working as the url was rendering to an error page so had to remove everything after org
+            cy.url().should('eq', 'https://app.pws.int.cruk.org/support-us/your-donation');
+            cy.get('.sc-fFSPTT.hHgOSe').find('span').contains('Yes, this donation is my own money')
+
+        })
     })
 })
